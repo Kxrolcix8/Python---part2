@@ -1,17 +1,22 @@
 # mypy do pobrania 
-def dodawanie (a ,b):
+def dodawanie (a: int ,b:int):
+    """Wykonuje dodawanie: """  
     return a+b
-def odejmowanie (a ,b):
+def odejmowanie (a: int ,b:int):
+    """Wykonuje odejmowanie: """
     return a-b
-def mnożenie (a ,b):
+def mnożenie (a: int ,b:int):
+    """Wykonuje mnożenienie: """
     return a*b
-def dzielenie (a ,b):
+def dzielenie (a: int ,b:int):
+    """Wykonuje dzielenie: """
     return a/b
 
 while True:
     działanie = input("Wybierz jakie działanie chcesz wykonać ('+','-','*','/','0' - kończy program: ")
     if działanie == '0':
         print("Koniec programu") 
+        
         break
     if działanie not in ['+','-','*','/']:
         print("Nieznana operacja")
@@ -21,18 +26,20 @@ while True:
     b = float(input("Podaj liczbę b: "))
 
     if działanie == '+':
-        """Wykonuje dodawanie"""
-        print(dodawanie(a,b))
+       
+       print(dodawanie.__doc__)
+       print(dodawanie(a,b))
         
     elif działanie == '-':
+        print(odejmowanie.__doc__)
         print(odejmowanie(a,b))
-        """Wykonuje odejmowanie"""
+        
     elif działanie == '*':
-        """Wykonuje mnożenienie"""
+        print(mnożenie.__doc__)
         print(mnożenie(a,b))
         
     else:
-        """Wykonuje dzielenie"""
+        print(dzielenie.__doc__)
         print(dzielenie(a,b))
         
      
